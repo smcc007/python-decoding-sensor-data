@@ -38,11 +38,11 @@ recs = house_info.get_data_by_date("id", rec_date=test_date)
 print(f"Number of sensor records picked on {test_date.strftime('%m/%d/%y')} is {len(recs)}")
 
 temperature_data = TemperatureData(data)
-recs = temperature_data.get_data_by_area(test_area)
+recs = temperature_data.get_data_by_area(rec_area=test_area)
 
 print(f"The house temperature sensor records for area: {test_area} is {len(recs)}")
 print(f"The Maximum temp is {max(recs)} and the minimum temp is {min(recs)}")
 
-recs = temperature_data.get_data_by_date(test_date)
+recs = temperature_data.get_data_by_date(rec_date=test_date)
 print(f"The house temperature sensor records for temperature: {test_date.strftime('%m/%d/%y')} is {len(recs)}")
 print(f"The Maximum temp is {max(recs)} and the minimum temp is {min(recs)}")
